@@ -1,0 +1,16 @@
+query GetTodoQuery($userId:String!){
+    todos(where: {userid: {_eq: $userId}}) {
+        id
+        userid
+        user {
+            created_at
+            id
+            last_seen
+            name
+        }
+        text
+        is_completed
+        time_stamp
+        title
+    }
+}

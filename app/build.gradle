@@ -35,6 +35,7 @@ android {
         viewBinding true
         dataBinding true
     }
+
 }
 
 dependencies {
@@ -49,12 +50,15 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
 
     implementation("androidx.navigation:navigation-fragment-ktx:2.4.2")
     implementation("androidx.navigation:navigation-ui-ktx:2.4.2")
 
-    implementation "com.apollographql.apollo3:apollo-runtime:3.2.1"
+    implementation "com.apollographql.apollo:apollo-runtime:2.4.6"
     implementation "com.apollographql.apollo:apollo-api:2.4.6"
+    implementation 'com.apollographql.apollo:apollo-http-cache:2.4.6'
     implementation "com.apollographql.apollo:apollo-normalized-cache-sqlite:2.4.6"
     implementation "com.apollographql.apollo:apollo-coroutines-support:2.4.6"
 
